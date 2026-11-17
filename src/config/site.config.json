@@ -1,0 +1,61 @@
+{
+  "business": {
+    "name": "Brady's Lawn Service",
+    "shortName": "Brady's",
+    "phone": "(563) 570-8635",
+    "email": "",
+    "address": { "street": "", "city": "", "state": "", "zip": "" },
+    "serviceAreas": [],
+    "hours": [],
+    "social": {
+      "facebook": "",
+      "instagram": "",
+      "google": "",
+      "yelp": "",
+      "nextdoor": "",
+      "youtube": ""
+    }
+  },
+  "branding": {
+    "logo": {
+      "src": "/images/brand/bradys-lawn-service-logo.webp",
+      "alt": "Brady's Lawn Service — QC Residential Lawn Care & Snow Removal",
+      "width": 900,
+      "height": 261
+    },
+    "favicon": "/favicon.svg",
+    "colors": {},
+    "images": {}
+  },
+  "services": {
+    "enabled": [
+      "lawnMowing",
+      "leafRemoval",
+      "brushRemoval",
+      "yardCleanup",
+      "shrubTrimming",
+      "snowRemoval"
+    ],
+    "overrides": {}
+  },
+  "content": {
+    "hero": {},
+    "about": {},
+    "finalCta": {},
+    "testimonials": []
+  },
+  "seo": {
+    "siteUrl": "",
+    "title": "Brady's Lawn Service | Lawn Care & Snow Removal | Quad Cities",
+    "description": "Brady's Lawn Service provides residential lawn care, leaf removal, yard cleanup, and snow removal in the Quad Cities area. Call (563) 570-8635.",
+    "ogImage": "",
+    "locale": "en_US",
+    "noindex": true
+  },
+  "form": {
+    "provider": "demo",
+    "formspreeId": "",
+    "webhookUrl": "",
+    "showDemoNotice": true
+  }
+}

@@ -1,0 +1,196 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — Brady's Lawn Service (customized from the
+ * original template; structure and spacing unchanged).
+ *
+ * Palette (from the logo):
+ *   Dark charcoal   #1B211B  -> --primary / --foreground (structural)
+ *   Light green-white #F6F8F3 -> --background
+ *   White           #FFFFFF  -> --card
+ *   Brand green     #36801D  -> --accent (conversion CTA, highlights)
+ *
+ * Typography: Manrope (display + body), loaded via <link> in __root.tsx.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: #f6f8f3;
+  --foreground: #1b211b;
+
+  --card: #ffffff;
+  --card-foreground: #1b211b;
+  --popover: #ffffff;
+  --popover-foreground: #1b211b;
+
+  --primary: #1b211b;
+  --primary-foreground: #ffffff;
+
+  --secondary: #ebf0e5;
+  --secondary-foreground: #1b211b;
+
+  --muted: #eef2e9;
+  --muted-foreground: #4d594d;
+
+  --accent: #36801d;
+  --accent-foreground: #ffffff;
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+
+  --border: #dce4d3;
+  --input: #dce4d3;
+  --ring: #36801d;
+
+  /* Legacy token names kept so existing utility classes keep working:
+     "navy" = dark charcoal structure, "gold" = brand green accent. */
+  --navy: #1b211b;
+  --navy-soft: #2b362b;
+  --gold: #36801d;
+  --gold-soft: #dcebd3;
+
+  --chart-1: #36801d;
+  --chart-2: #5f8f4a;
+  --chart-3: #a9c79a;
+  --chart-4: #1b211b;
+  --chart-5: #7a8a6e;
+
+  --sidebar: #f6f8f3;
+  --sidebar-foreground: #1b211b;
+  --sidebar-primary: #1b211b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ebf0e5;
+  --sidebar-accent-foreground: #1b211b;
+  --sidebar-border: #dce4d3;
+  --sidebar-ring: #36801d;
+}
+
+.dark {
+  --background: #151a15;
+  --foreground: #f6f8f3;
+
+  --card: #1f261f;
+  --card-foreground: #f6f8f3;
+  --popover: #1f261f;
+  --popover-foreground: #f6f8f3;
+
+  --primary: #f6f8f3;
+  --primary-foreground: #1b211b;
+
+  --secondary: #2a332a;
+  --secondary-foreground: #f6f8f3;
+
+  --muted: #2a332a;
+  --muted-foreground: #b4bfb0;
+
+  --accent: #4fa52f;
+  --accent-foreground: #101410;
+
+  --destructive: oklch(0.7 0.19 22);
+  --destructive-foreground: oklch(0.97 0.006 85);
+
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: #4fa52f;
+
+  --navy: #151a15;
+  --navy-soft: #1f261f;
+  --gold: #4fa52f;
+  --gold-soft: #2a3a24;
+
+  --chart-1: #4fa52f;
+  --chart-2: #7fb36a;
+  --chart-3: #a9c79a;
+  --chart-4: #d4dccd;
+  --chart-5: #8a9a7e;
+
+  --sidebar: #1f261f;
+  --sidebar-foreground: #f6f8f3;
+  --sidebar-primary: #4fa52f;
+  --sidebar-primary-foreground: #101410;
+  --sidebar-accent: #2a332a;
+  --sidebar-accent-foreground: #f6f8f3;
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: #4fa52f;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Smooth in-page anchor scrolling for the sticky header offset. */
+html {
+  scroll-behavior: smooth;
+}
+
+@utility section-pad {
+  padding-block: clamp(4rem, 7vw, 7rem);
+}

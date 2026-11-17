@@ -1,0 +1,3 @@
+# Mockup / demo site — not for indexing.
+User-agent: *
+Disallow: /
